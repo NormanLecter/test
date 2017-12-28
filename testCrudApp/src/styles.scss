@@ -1,9 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+@import url('~@angular/material/prebuilt-themes/indigo-pink.css');
 
 body {
+    padding: 2em 23em; 
     font-family: 'Raleway';
     background: #2E9CE6;
-    COLOR: #FFF;
+    color: #FFF;
+}
+
+@import url("~@angular/material/prebuilt-themes/indigo-pink.css");
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+
+.title{
+  cursor: pointer;
+  font-weight: bold;
+  outline: 0;
+}
+
+.example-icon {
+    padding: 0 14px;
+}
+  
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+li{
+  font-family: 'Raleway';
+  list-style-type: none;
+  font-size: 18px;
+}
+
+h2{
+  color: indigo;
+}
+
+ul {
+  list-style-type:none;
+  margin:0 0 2em 0;
+  padding:0;
+}
+
+ul li {
+  display:inline;
+  margin-right: 30px;
+}
+
+.life-container {
+  background:#3FA0E1;
+  padding:.5em;
+  color: #fff;
+  cursor: pointer;
 }
