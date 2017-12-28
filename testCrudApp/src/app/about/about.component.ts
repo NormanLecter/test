@@ -8,7 +8,7 @@ import { ThebestService } from '../thebest.service';
 })
 export class AboutComponent implements OnInit {
 
-  private theBestList = [];
+  public theBestList = [];
 
   constructor(private _bestData : ThebestService) { }
 

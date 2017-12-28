@@ -8,8 +8,8 @@ import { ThebestService } from '../thebest.service';
 })
 export class HomeComponent implements OnInit {
 
-  private theBestList = [];
-  private newBestPerson : string;
+  public theBestList = [];
+  public newBestPerson : string;
 
   constructor(private _bestData : ThebestService){}
 
