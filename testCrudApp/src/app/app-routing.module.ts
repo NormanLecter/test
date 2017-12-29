@@ -5,7 +5,6 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
-import { ServiceNumberComponent } from './service-number/service-number.component';
 
 const routes: Routes = [
   {
@@ -30,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: 'services/:id',
-    component: ServiceNumberComponent
+    component: ServicesComponent
   },
 ];
 

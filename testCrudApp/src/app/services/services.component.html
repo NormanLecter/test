@@ -2,12 +2,13 @@
   <mat-toolbar-row>
     <h1><span class="title" routerLink="">Material Angular</span></h1>
     <span class="example-spacer"></span>
-    <button mat-button routerLink="../about">About</button>
-    <button mat-button routerLink="services">Services</button>
-    <button mat-button routerLink="../contact">Contact</button>
+    <button mat-button routerLink="{{ aboutUrl }}">About</button>
+    <button mat-button routerLink="{{ servicesUrl }}">Services</button>
+    <button mat-button routerLink="{{ contactUrl }}">Contact</button>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-card>
+    <span>{{ text }}</span>
   <h1>Services work!</h1>
   <p (click)="goHome()" style="cursor:pointer;">Take me to home</p>
 </mat-card>

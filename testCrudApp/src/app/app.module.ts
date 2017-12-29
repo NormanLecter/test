@@ -12,7 +12,6 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-import { ServiceNumberComponent } from './service-number/service-number.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +19,7 @@ import { ServiceNumberComponent } from './service-number/service-number.componen
     AboutComponent,
     ServicesComponent,
     ContactComponent,
-    HomeComponent,
-    ServiceNumberComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
