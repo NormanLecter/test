@@ -6,13 +6,20 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 @Injectable()
 export class ThebestService {
 
-  private bests = new BehaviorSubject<any>(['Lech Walesa', 'Adam Malysz', 'Jackie Chan']);
+  private persons : any;
+  private bests = new BehaviorSubject<any>([]);
   best = this.bests.asObservable();
+  temp : String;
 
-  constructor() { }
+  constructor() {
+    this.persons = JSON.parse(localStorage.getItem("persons"));
+    this.bests.next(this.persons);
+  }
 
-  changeBests(best){
-    this.bests.next(best);
+  changeBests(bestsList){
+    this.persons = bestsList;
+    localStorage.setItem("persons", JSON.stringify(this.persons))
+    this.bests.next(bestsList);
   }
 
 }
