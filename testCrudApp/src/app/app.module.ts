@@ -12,6 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { DynamicSearchPipe } from './dynamic-search.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomeComponent } from './home/home.component';
     AboutComponent,
     ServicesComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    DynamicSearchPipe
   ],
   imports: [
     BrowserModule,
