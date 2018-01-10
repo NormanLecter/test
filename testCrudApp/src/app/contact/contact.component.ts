@@ -1,11 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DynamicSearchPipe } from '../dynamic-search.pipe';
 import { ThebestService } from '../thebest.service';
+import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  animations: [
+    trigger('tips', [
+      transition(':enter', [ 
+
+        query(':self', style({ opacity: 0 }), {optional: true}),
+
+        query(':self', stagger('300ms', [
+          animate('.6s ease-in', keyframes([
+            style({opacity: 0, transform: 'translateY(-75%)', offset: 0}),
+            style({opacity: .5, transform: 'translateY(35px)',  offset: 0.3}),
+            style({opacity: 1, transform: 'translateY(0)',     offset: 1.0}),
+          ]))]), {optional: false})
+      ])
+    ])
+  ]
 })
 export class ContactComponent implements OnInit {
 

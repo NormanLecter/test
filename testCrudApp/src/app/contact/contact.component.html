@@ -15,9 +15,9 @@
   <input matInput [(ngModel)]="searchText" placeholder="search person..." (keydown)="searchPerson($event, searchText)">
   </mat-form-field>
   <button mat-raised-button (click)="searchPersonClick(searchText)">Search</button>
-  <ul *ngFor="let p of theBestList | dynamicSearch : searchText" >
-      <li (click)="searchPersonClick(p)" style="background-color: #B9B9B9; border-radius: 20px;"><span style="padding: 10px;">Tip: {{ p }}</span></li>
-  </ul>
+    <ul *ngFor="let p of theBestList | dynamicSearch : searchText" [@tips]="p">
+      <li (click)="searchPersonClick(p)">Tip: {{ p }}</li>
+    </ul>
 </mat-card>
 <div *ngIf="onList">
 <mat-card>
